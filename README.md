@@ -30,18 +30,15 @@ git clone https://github.com/lewischn/flowfit.git
 cd flowfit
 2. Install dependencies:
 npm install
-3. Start the development server:
-npm start
-4. Create a .env file in the root directory and add your Firebase configuration:
+3. Create a .env file in the root directory and add your Firebase configuration:
 - REACT_APP_FIREBASE_API_KEY=your_api_key
 - REACT_APP_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
 - REACT_APP_FIREBASE_PROJECT_ID=your_project_id
 - REACT_APP_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
 - REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
 - REACT_APP_FIREBASE_APP_ID=your_app_id
-5. Start the development server:
+4. Start the development server:
 npm start
-
 ## Usage
 - Switch between Study Timer, Workout Log, and Calendar using the tabs.
 - Create workout splits and exercises, then log sets/reps during workouts.
