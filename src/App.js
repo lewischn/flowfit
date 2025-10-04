@@ -1,4 +1,4 @@
-// App.js
+
 import React, { useState, useEffect } from 'react';
 import { Clock, Dumbbell, Calendar } from 'lucide-react';
 import { collection, getDocs, addDoc, deleteDoc, doc } from 'firebase/firestore';
@@ -13,14 +13,12 @@ export default function FlowFit() {
   const [splits, setSplits] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Load data from Firebase on mount
   useEffect(() => {
     loadData();
   }, []);
 
   const loadData = async () => {
     try {
-      // Load sessions
       const sessionsSnapshot = await getDocs(collection(db, 'sessions'));
       const sessionsData = sessionsSnapshot.docs.map(doc => ({
         id: doc.id,
@@ -28,7 +26,6 @@ export default function FlowFit() {
       }));
       setStudySessions(sessionsData);
 
-      // Load splits
       const splitsSnapshot = await getDocs(collection(db, 'splits'));
       const splitsData = splitsSnapshot.docs.map(doc => ({
         id: doc.id,
@@ -133,7 +130,7 @@ export default function FlowFit() {
             splits={splits}
             addSplit={addSplit}
             deleteSplit={deleteSplitFromDB}
-            reloadSplits={loadData} // pass the function
+            reloadSplits={loadData} 
           />
           )}
           
